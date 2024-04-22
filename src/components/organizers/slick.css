@@ -1,0 +1,48 @@
+.slick-arrow.custom-prev-arrow,
+.slick-arrow.custom-next-arrow {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slick-arrow.custom-next-arrow {
+  right: 0;
+}
+
+.slick-arrow.custom-prev-arrow svg,
+.slick-arrow.custom-next-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .slick-arrow.custom-prev-arrow {
+    top: 100%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .slick-arrow.custom-next-arrow {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+.slick-slide {
+  opacity:0;
+  transition:opacity 0.5s ease-out;
+}
+
+.slick-active {
+   opacity:1!important;
+   transition:opacity 0.5s ease-in;
+   }
+
+.slick-cloned {
+   opacity: 0.3;
+}

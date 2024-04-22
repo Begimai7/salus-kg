@@ -11,6 +11,9 @@ export default {
         xl: "1280px",
         "2xl": "1536px",
       },
+      colors: {
+        "linear-green": "#36CBB9, #A7D545",
+      },
     },
     plugins: [],
   },
