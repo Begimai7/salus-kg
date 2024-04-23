@@ -170,10 +170,7 @@ const CustomNextArrow = (props) => {
   );
 };
 
-export const OrganizersInfo = ({
-  currentSlide,
-  setSelectedOrganizerId,
-}) => {
+export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -229,14 +226,21 @@ export const OrganizersInfo = ({
         breakpoint: 512,
         settings: {
           slidesToShow: 1,
-          arrows: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 390,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
   };
 
   return (
-    <div className="md:w-[90%] w-[100%] m-auto my-10">
+    <div className="md:w-[90%] w-[100%] m-[auto] my-[50px]">
       <Slider
         {...settings}
         afterChange={(currentSlide) => setSelectedOrganizerId(currentSlide + 1)}

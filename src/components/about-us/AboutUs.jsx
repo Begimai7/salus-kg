@@ -4,11 +4,10 @@ import { OursServices } from "./OursServices";
 import { Benefits } from "./Benefits";
 
 export const AboutUs = () => {
-
   return (
     <div className="bg-white rounded-[100px] sm:py-16 py-12">
       <Container>
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-40">
           <div>
             <h2 className="font-bold sm:text-[48px] text-[24px] uppercase text-[#45651C]">
               О нас

@@ -14,8 +14,12 @@ export const Nav = () => {
   const openMenuBurgerHandler = () => {
     setOpenMenuBurger(!openMenuBurger);
   };
+
   const openLanguageSelectHandler = () => {
-    setOpenLanguages(!openLanguages);
+    setOpenLanguages(true);
+  };
+  const selectLanguageSelectHandler = () => {
+    setOpenLanguages(false);
   };
 
   return (
@@ -24,13 +28,15 @@ export const Nav = () => {
         <Container>
           <nav>
             <div className="lg:flex hidden justify-between items-center gap-6 py-2 bg-[#DBEEDE] fixed top-0 left-0 right-0 z-50">
-              <div className="flex justify-between items-center gap-6 py-2 w-full px-20">
+              <div className="flex justify-between items-center  gap-6 py-2 w-full px-20">
                 <div className="lg:block hidden text-[#45651C] font-bold sm:text-[40px] text-[24px] ">
                   Salus<span className="font-serif font-medium">.kg</span>
                 </div>
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-6">
-                  <ul className="lg:flex gap-6">
+                <div className="lg:flex hidden gap-6  lg:items-center">
+                  <ul
+                    className="lg:flex  items-center gap-6 mt-3"
+                    onClick={selectLanguageSelectHandler}
+                  >
                     {nav_list.map((el) => (
                       <li
                         className="text-[#2D2D2D] hover:text-[#45651C] font-medium hover:font-bold lg:text-[18px] text-[14px]"
@@ -43,17 +49,15 @@ export const Nav = () => {
                   <div>
                     <div
                       className="lg:flex"
-                      onClick={openLanguageSelectHandler}
+                      onMouseMove={openLanguageSelectHandler}
                     >
                       РУ <img src={closeArrow} alt="" />
                     </div>
+
                     {openLanguages && (
-                      <Languages
-                        selectLanguageHandler={openLanguageSelectHandler}
-                      />
+                      <Languages onClickHandler={selectLanguageSelectHandler} />
                     )}
                   </div>
-
                   <div className="lg:flex ml-3">
                     <Button padding="64px">Связаться</Button>
                   </div>
@@ -82,7 +86,7 @@ export const Nav = () => {
               >
                 <div>
                   {" "}
-                  <ul className="flex flex-col  gap-6">
+                  <ul className="flex flex-col items-start mt-40 gap-6">
                     {nav_list.map((el) => (
                       <li
                         className="text-[#2D2D2D] hover:text-[#45651C] font-medium hover:font-bold"
@@ -94,7 +98,7 @@ export const Nav = () => {
                   </ul>
                   <div>
                     <div
-                      className="flex mt-8"
+                      className="flex mt-8 ml-8"
                       onClick={openLanguageSelectHandler}
                     >
                       РУ <img src={closeArrow} alt="" className="ml-2" />

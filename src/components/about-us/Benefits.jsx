@@ -27,12 +27,12 @@ const benefit_data = [
 
 export const Benefits = () => {
   const [activeId, setActiveId] = useState(null);
+
   useEffect(() => {
-    AOS.init({
-      // your AOS configuration
-    });
+    AOS.init({});
     AOS.refresh();
   }, [activeId]);
+
   return (
     <div>
       <h2 className="font-bold md:text-[48px] text-[24px] uppercase text-[#45651C]">
@@ -51,7 +51,7 @@ export const Benefits = () => {
               key={el.id}
               className={`flex items-center ml-0 md:gap-5 gap-1 hover:text-[#45651C] ${
                 activeId === el.id
-                  ? "text-[#45651C] ransition-opacity duration-500 ease-in-out"
+                  ? "text-[#45651C] transition-opacity duration-500 ease-in-out"
                   : "text-[#BBDA81]"
               } transition-colors  duration-500 ease-in-out`}
               onClick={() => setActiveId(activeId === el.id ? null : el.id)}

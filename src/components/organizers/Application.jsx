@@ -20,7 +20,7 @@ export const Application = () => {
         {sentSuccessfully && <SentSuccessfully closeModal={closeHandler} />}
       </div>
       <div>
-        <h2 className="font-bold md:text-[48px] text-[24px] uppercase text-[#45651C]">
+        <h2 className="font-bold md:text-[48px] text-[24px] md:mt-16 uppercase text-[#45651C]">
           Заявка
         </h2>
         <hr className="bg-[#45651C] h-[2px] font-bold" />
@@ -64,16 +64,18 @@ export const Application = () => {
                 </Button>
               </div>
             </div>
-            <div className="p-7 bg-white bg-opacity-55 backdrop-blur-md rounded-[34px] text-start lg:w-1/2 sm:w-2/3 w-full ">
-              <div className="flex flex-col gap-4 rounded-3xl">
-                <h6 className="text-[#45651C] sm:text-[24px] text-[18px font-semibold">
+            <div className="p-7 bg-white bg-opacity-50 backdrop-blur-md rounded-3xl text-start lg:w-1/2 sm:w-2/3 w-full">
+              <div className="flex flex-col gap-4">
+                <h6 className="text-[#45651C] sm:text-24 text-18 font-semibold">
                   Так же вы можете связаться с нами по телефону
                 </h6>
-                <div className="flex justify-center gap-2 bg-white py-2  rounded-full">
-                  <img src={phone} alt="" /> <span>(+996) 000 00 00 00</span>
+                <div className="flex justify-center items-center gap-2 bg-white py-2 rounded-full border-2 border-solid border-[#BEEAE0]">
+                  <img src={phone} alt="phone icon" className="h-6" />
+                  <span>(+996) 000 00 00 00</span>
                 </div>
-                <div className="flex justify-center gap-2 bg-white py-2  rounded-full">
-                  <img src={phone} alt="" /> <span>(+996) 000 00 00 00</span>
+                <div className="flex justify-center items-center gap-2 bg-white py-2 rounded-full border-2 border-solid border-[#BEEAE0]">
+                  <img src={phone} alt="phone icon" className="h-6" />
+                  <span>(+996) 000 00 00 00</span>
                 </div>
               </div>
             </div>

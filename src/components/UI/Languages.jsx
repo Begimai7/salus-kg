@@ -1,38 +1,13 @@
-const languages_list = [
-  {
-    id: 1,
-    title: "Русский (РУ)",
-  },
-  {
-    id: 2,
-    title: "Кыргызча (КГ)",
-  },
-  {
-    id: 3,
-    title: "English (EN)",
-  },
-  {
-    id: 4,
-    title: "اَلْعَرَبِيَّةُ (AR)",
-  },
-  {
-    id: 5,
-    title: "Türkçe (TR)",
-  },
-  {
-    id: 6,
-    title: "中文",
-  },
-];
+import { languages_list } from "../utils/constants/contants";
 
-export const Languages = ({ selectLanguageHandler }) => {
+export const Languages = ({ onClickHandler }) => {
   return (
     <div className="absolute bg-white w-[194px] rounded-3xl flex flex-col justify-between">
       {languages_list.map((el) => (
         <div
           key={el.id}
-          className="hover:bg-[#DBEEDE] w-full p-3"
-          onClick={selectLanguageHandler}
+          className="hover:bg-[#DBEEDE] w-full px-[14px] py-2 rounded-3xl"
+          onClick={onClickHandler}
         >
           {el.title}
         </div>

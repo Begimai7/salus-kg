@@ -34,15 +34,19 @@
   }
 }
 .slick-slide {
-  opacity:0;
-  transition:opacity 0.5s ease-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 
 .slick-active {
-   opacity:1!important;
-   transition:opacity 0.5s ease-in;
-   }
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in;
+}
 
 .slick-cloned {
-   opacity: 0.3;
+  opacity: 0.3;
+}
+.organizers-slider .slick-slide:focus {
+  outline: none;
+  border: none;
 }
