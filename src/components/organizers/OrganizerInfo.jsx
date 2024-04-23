@@ -2,28 +2,28 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import oshPlaza from "../../assets/img/organizers/osh-plaza.png";
-import jkYujnyi from "../../assets/img/organizers/jk-yujnyi.png";
-import apartment from "../../assets/img/organizers/apartment.png";
-import ihlas from "../../assets/icons/organizers/ihlas.svg";
-import kgGroup from "../../assets/icons/organizers/kg-group.svg";
-import eliteHouse from "../../assets/icons/organizers/elite-house.svg";
-import aalamStroy from "../../assets/icons/organizers/aalam-stroy.svg";
-import munara from "../../assets/icons/organizers/munara.svg";
-import tsGroup from "../../assets/icons/organizers/ts-group.svg";
-import avangara from "../../assets/icons/organizers/avangara.svg";
-import royal from "../../assets/icons/organizers/royal.svg";
-import hovIhlas from "../../assets/icons/organizers/hover-icons/ihlas.svg";
-import hovKgGroup from "../../assets/icons/organizers/hover-icons/kg-group.svg";
-import hovEliteHouse from "../../assets/icons/organizers/hover-icons/elite-house.svg";
-import hovAalamStroy from "../../assets/icons/organizers/hover-icons/aalam-stroy.svg";
-import hovMunara from "../../assets/icons/organizers/hover-icons/munara.svg";
-import hovTsGroup from "../../assets/icons/organizers/hover-icons/ts-group.svg";
-import hovAvangara from "../../assets/icons/organizers/hover-icons/avangara.svg";
-import hovRoyal from "../../assets/icons/organizers/hover-icons/royal.svg";
-import file from "../../assets/icons/organizers/file.svg";
-import LeftArrow from "../../assets/icons/organizers/arrow-left.svg";
-import RightArrow from "../../assets/icons/organizers/arrow-right.svg";
+import oshPlaza from "../../../public/assets/img/organizers/osh-plaza.png";
+import jkYujnyi from "../../../public/assets/img/organizers/jk-yujnyi.png";
+import apartment from "../../../public/assets/img/organizers/apartment.png";
+import ihlas from "../../../public/assets/icons/organizers/ihlas.svg";
+import kgGroup from "../../../public/assets/icons/organizers/kg-group.svg";
+import eliteHouse from "../../../public/assets/icons/organizers/elite-house.svg";
+import aalamStroy from "../../../public/assets/icons/organizers/aalam-stroy.svg";
+import munara from "../../../public/assets/icons/organizers/munara.svg";
+import tsGroup from "../../../public/assets/icons/organizers/ts-group.svg";
+import avangara from "../../../public/assets/icons/organizers/avangara.svg";
+import royal from "../../../public/assets/icons/organizers/royal.svg";
+import hovIhlas from "../../../public/assets/icons/organizers/hover-icons/ihlas.svg";
+import hovKgGroup from "../../../public/assets/icons/organizers/hover-icons/kg-group.svg";
+import hovEliteHouse from "../../../public/assets/icons/organizers/hover-icons/elite-house.svg";
+import hovAalamStroy from "../../../public/assets/icons/organizers/hover-icons/aalam-stroy.svg";
+import hovMunara from "../../../public/assets/icons/organizers/hover-icons/munara.svg";
+import hovTsGroup from "../../../public/assets/icons/organizers/hover-icons/ts-group.svg";
+import hovAvangara from "../../../public/assets/icons/organizers/hover-icons/avangara.svg";
+import hovRoyal from "../../../public/assets/icons/organizers/hover-icons/royal.svg";
+import file from "../../../public/assets/icons/organizers/file.svg";
+import LeftArrow from "../../../public/assets/icons/organizers/arrow-left.svg";
+import RightArrow from "../../../public/assets/icons/organizers/arrow-right.svg";
 import "./slick.css";
 import { Button } from "../UI/Button";
 
@@ -186,7 +186,6 @@ export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
   }, []);
 
   const currentOrganizer = organizers_info.find((el) => el.id === currentSlide);
-  console.log(currentOrganizer, "currentOrganizer");
 
   const similarOrganizers = organizers_info
     .filter((el) => el.id !== currentSlide)

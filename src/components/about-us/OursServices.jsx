@@ -1,9 +1,9 @@
-import setting from "../../assets/icons/about-us/setting.svg";
-import project from "../../assets/icons/about-us/project.svg";
-import rent from "../../assets/icons/about-us/rent.svg";
-import exportt from "../../assets/icons/about-us/export.svg";
-import consulting from "../../assets/icons/about-us/consulting.svg";
-import makeProject from "../../assets/icons/about-us/make-project.svg";
+import setting from "../../../public/assets/icons/about-us/setting.svg";
+import project from "../../../public/assets/icons/about-us/project.svg";
+import rent from "../../../public/assets/icons/about-us/rent.svg";
+import exportt from "../../../public/assets/icons/about-us/export.svg";
+import consulting from "../../../public/assets/icons/about-us/consulting.svg";
+import makeProject from "../../../public/assets/icons/about-us/make-project.svg";
 
 const services_data = [
   {

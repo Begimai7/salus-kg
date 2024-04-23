@@ -19,7 +19,7 @@ function Select({ handleChange, title }) {
             const langCodeMatch = el.title.match(/\(([^)]+)\)/);
             const langCode = langCodeMatch ? langCodeMatch[1] : "";
 
-            console.log(`Title: ${el.title}, Lang Code: ${langCode}`); // Debug log
+            console.log(`Title: ${el.title}, Lang Code: ${langCode}`); 
 
             return (
               <option key={el.id} value={langCode}>

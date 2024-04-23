@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import benefitsImage from "../../assets/img/benefits.png";
+import benefitsImage from "../../../public/assets/img/benefits.png";
 import { GoDotFill } from "react-icons/go";
 import AOS from "aos";
 import "aos/dist/aos.css";

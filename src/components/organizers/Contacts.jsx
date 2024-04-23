@@ -1,12 +1,12 @@
-import phone from "../../assets/icons/organizers/phone.svg";
-import facebook from "../../assets/icons/contacts/facebook.svg";
-import instagram from "../../assets/icons/contacts/instagram.svg";
-import whatsapp from "../../assets/icons/contacts/whatsapp.svg";
-import telegram from "../../assets/icons/contacts/telegram.svg";
-import tiktok from "../../assets/icons/contacts/tiktok.svg";
-import gmail from "../../assets/icons/contacts/gmail.svg";
-import location from "../../assets/icons/contacts/location.svg";
-import map from "../../assets/img/map.png";
+import phone from "../../../public/assets/icons/organizers/phone.svg";
+import facebook from "../../../public/assets/icons/contacts/facebook.svg";
+import instagram from "../../../public/assets/icons/contacts/instagram.svg";
+import whatsapp from "../../../public/assets/icons/contacts/whatsapp.svg";
+import telegram from "../../../public/assets/icons/contacts/telegram.svg";
+import tiktok from "../../../public/assets/icons/contacts/tiktok.svg";
+import gmail from "../../../public/assets/icons/contacts/gmail.svg";
+import location from "../../../public/assets/icons/contacts/location.svg";
+import map from "../../../public/assets/img/map.png";
 
 const social_icons = [
   {

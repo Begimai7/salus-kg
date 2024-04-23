@@ -1,5 +1,5 @@
-import applicationBg from "../../assets/img/organizers/application-bg.png";
-import phone from "../../assets/icons/organizers/phone.svg";
+import applicationBg from "../../../public/assets/img/organizers/application-bg.png";
+import phone from "../../../public/assets/icons/organizers/phone.svg";
 import { Button } from "../UI/Button";
 import { useState } from "react";
 import { SentSuccessfully } from "../UI/SentSuccessfully";

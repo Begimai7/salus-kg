@@ -1,6 +1,6 @@
-import success from "../../assets/icons/mini-icons/success.svg";
+import success from "../../../public/assets/icons/mini-icons/success.svg";
 import { Button } from "./Button";
-import cancel from "../../assets/icons/mini-icons/cencel.svg";
+import cancel from "../../../public/assets/icons/mini-icons/cencel.svg";
 
 export const SentSuccessfully = ({ closeModal }) => {
   return (

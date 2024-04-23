@@ -1,8 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const AlaTooSquareMap = () => {
-  const position = [42.8747222222, 74.6122222222]; // Latitude and Longitude of Ala-Too Square
-  const zoomLevel = 16; // Adjust the zoom level as needed
+  const position = [42.8747222222, 74.6122222222]; 
+  const zoomLevel = 16; 
 
   return (
     <MapContainer

@@ -7,7 +7,7 @@
   margin: 0;
 }
 body {
-  background-image: url("./assets//img/bg-color.png");
+  background-image: url("../public/assets/img/bg-color.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 390px;

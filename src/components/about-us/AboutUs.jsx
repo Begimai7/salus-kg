@@ -1,5 +1,5 @@
 import { Container } from "../UI/Container";
-import aboutImg from "../../assets/img/about-uss.png";
+import aboutImg from "../../../public/assets/img/about-uss.png";
 import { OursServices } from "./OursServices";
 import { Benefits } from "./Benefits";
 
@@ -35,7 +35,7 @@ export const AboutUs = () => {
                   платформу.
                 </p>
               </div>
-              <div className="w-[1120px] h-[500px] object-fit">
+              <div className="w-[1120px] h-[599px] object-fit">
                 <img className="w-full  object-cover " src={aboutImg} alt="" />
               </div>
             </div>

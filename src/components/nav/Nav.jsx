@@ -1,10 +1,10 @@
 import { Button } from "../UI/Button";
 import { Container } from "../UI/Container";
 import { nav_list } from "../utils/constants/contants";
-import closeArrow from "../../assets/icons/mobile/close-arrow.svg";
+import closeArrow from "../../../public/assets/icons/mobile/close-arrow.svg";
 import { useState } from "react";
-import burger from "../../assets/icons/mobile/open-burger.svg";
-import closeBurger from "../../assets/icons/mobile/burger.svg";
+import burger from "../../../public/assets/icons/mobile/open-burger.svg";
+import closeBurger from "../../../public/assets/icons/mobile/burger.svg";
 import { Languages } from "../UI/Languages";
 
 export const Nav = () => {

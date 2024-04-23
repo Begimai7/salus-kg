@@ -1,11 +1,11 @@
 import { Container } from "../UI/Container";
 import { nav_list } from "../utils/constants/contants";
-import facebook from "../../assets/icons/footer/facebook.svg";
-import instagram from "../../assets/icons/footer/instagram.svg";
-import whatsapp from "../../assets/icons/footer/whatsapp.svg";
-import telegram from "../../assets/icons/footer/telegram.svg";
-import tiktok from "../../assets/icons/footer/tiktok.svg";
-import gmail from "../../assets/icons/footer/gmail.svg";
+import facebook from "../../../public/assets/icons/footer/facebook.svg";
+import instagram from "../../../public/assets/icons/footer/instagram.svg";
+import whatsapp from "../../../public/assets/icons/footer/whatsapp.svg";
+import telegram from "../../../public/assets/icons/footer/telegram.svg";
+import tiktok from "../../../public/assets/icons/footer/tiktok.svg";
+import gmail from "../../../public/assets/icons/footer/gmail.svg";
 
 const social_icons = [
   {
