@@ -1,3 +1,7 @@
 export const Container = ({ children }) => {
-  return <div className="md:px-20 px-4">{children}</div>;
+  return (
+    <div className="lg:w-[1280px] sm:w-[640px] md:w-[768px] s: full mx-auto">
+      {children}
+    </div>
+  );
 };

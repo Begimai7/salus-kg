@@ -37,18 +37,18 @@ const social_icons = [
 export const Footer = () => {
   return (
     <Container>
-      <div className="flex flex-col items-center justify-start gap-6 my-9 ">
-        <ul className="flex sm:flex-row flex-col sm:items-center  gap-5">
+      <div className="flex flex-col sm:items-center justify-start gap-6 my-12 px-4">
+        <ul className="flex sm:flex-row flex-col sm:items-center gap-4 m-0 p-0">
           {nav_list.map((el) => (
             <li
-              className="font-medium text-[16px] hover:text-[#45651C]  hover:font-bold"
+              className="font-medium text-[16px] hover:text-[#45651C]  hover:font-bold p-1"
               key={el.id}
             >
               {el.name}
             </li>
           ))}
         </ul>
-        <ul className="flex gap-6 items-center  ">
+        <ul className="flex gap-6 sm:items-center  m-0 p-0">
           {social_icons.map((el) => (
             <li key={el.id}>
               <img src={el.icon} alt="" />

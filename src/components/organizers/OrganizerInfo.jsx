@@ -197,7 +197,7 @@ export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
-    arrows: windowWidth >= 390,
+    arrows: windowWidth >= 1024,
     fade: true,
     responsive: [
       {
@@ -211,7 +211,7 @@ export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          arrows: true,
+          arrows: false,
         },
       },
       {
@@ -239,7 +239,7 @@ export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
   };
 
   return (
-    <div className="md:w-[90%] w-[100%] m-[auto] my-[50px]">
+    <div className="md:w-[90%] w-[100%] m-[auto]">
       <Slider
         {...settings}
         afterChange={(currentSlide) => setSelectedOrganizerId(currentSlide + 1)}

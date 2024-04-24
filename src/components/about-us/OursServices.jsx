@@ -73,18 +73,18 @@ export const OursServices = () => {
         Наши услуги
       </h2>
       <hr className="bg-[#45651C] h-[2px] font-bold" />
-      <ul className="grid gap-4 lg:grid-cols-3 sm:grid-cols-2  grid-rows-3  mt-8">
+      <ul className="grid gap-4 lg:grid-cols-3 sm:grid-cols-2  grid-rows-3 pl-0">
         {services_data.map((el) => (
           <li
             key={el.id}
             style={{ background: el.backgroundColor }}
-            className="flex flex-col items-start gap-5 py-6 px-8  rounded-[40px]"
+            className="flex flex-col items-start gap-3 rounded-[40px] pt-6 px-8"
           >
-            <div className="bg-[#45651C] p-3 rounded-full">
+            <div className="bg-[#45651C] p-3 rounded-full flex items-center">
               <img src={el.icon} alt="" />{" "}
             </div>
             <div>
-              <h6 className="text-[#45651C] font-semibold text-[22px] pb-2">
+              <h6 className="text-[#45651C] font-semibold text-[22px]">
                 {el.title}
               </h6>
               <p className="text-[#2D2D2D]">{el.description}</p>

@@ -166,35 +166,37 @@ export const Organizers = () => {
     sliderRef.current.slickGoTo(id - 1);
   };
   return (
-    <div className="w-full flex flex-col gap-7">
-      <h2 className="font-semibold md:text-[48px] text-[24px]  uppercase text-[#45651C]">
-        Застройщики
-      </h2>
-      <hr className="bg-[#45651C] h-[2px] font-bold" />
-
-      <div className="md:w-[90%] w-[80%] m-auto my-14">
-        <Slider className="organizers-slider" {...settings} ref={sliderRef}>
-          {organizers.map((el) => (
-            <div
-              key={el.id}
-              className="flex justify-center items-center "
-              onClick={() => goToSlide(el.id)}
-              style={{ outline: "none" }}
-            >
-              <img
-                className="outline-none"
-                src={selectedOrganizerId === el.id ? el.hover_logo : el.logo}
-              />
-            </div>
-          ))}
-        </Slider>
+    <div className="w-full flex flex-col gap-7 md: px-4 m-0">
+      <div>
+        {" "}
+        <h2 className="font-semibold md:text-[48px] text-[24px]  uppercase text-[#45651C]">
+          Застройщики
+        </h2>
+        <hr className="bg-[#45651C] h-[2px] font-bold" />
+        <div className="md:w-[90%] w-[80%] m-auto my-14">
+          <Slider className="organizers-slider" {...settings} ref={sliderRef}>
+            {organizers.map((el) => (
+              <div
+                key={el.id}
+                className="flex justify-center items-center outline-none"
+                onClick={() => goToSlide(el.id)}
+                style={{ outline: "none" }}
+              >
+                <img
+                  className="outline-none"
+                  src={selectedOrganizerId === el.id ? el.hover_logo : el.logo}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
       <OrganizersInfo
         currentSlide={currentSlide}
         setSelectedOrganizerId={setSelectedOrganizerId}
         selectedOrganizerId={selectedOrganizerId}
       />
-      <Application />
+      <Application connection="true" />
       <Contacts />
     </div>
   );

@@ -5,19 +5,19 @@ import { Benefits } from "./Benefits";
 
 export const AboutUs = () => {
   return (
-    <div className="bg-white rounded-[100px] sm:py-16 py-12">
+    <div className="bg-white rounded-[100px] sm:py-16 py-16 px-4">
       <Container>
-        <div className="flex flex-col gap-40">
+        <div className="flex flex-col sm:gap-28 gap-16">
           <div>
             <h2 className="font-bold sm:text-[48px] text-[24px] uppercase text-[#45651C]">
               О нас
             </h2>
             <hr className="bg-[#45651C] h-[2px] font-bold" />
-            <div className="mt-6 flex relative  justify-end ">
+            <div className="mt-8 flex relative  justify-end ">
               <div
-                className="flex flex-col gap-4 
+                className="flex flex-col gap-1 
               absolute top-[20%] md:left-4 lg:w-[738px] md:w-2/3 w-full lg:text-[18px] text-[16px]
-               bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm px-8 py-6 rounded-[40px] "
+                bg-opacity-60 backdrop-filter bg-[#fff] backdrop-blur-sm px-8 py-6 rounded-[40px] "
               >
                 <p className="text-[#2D2D2D] leading-7">
                   Наша компания предоставляет современную и удобную систему
@@ -35,7 +35,7 @@ export const AboutUs = () => {
                   платформу.
                 </p>
               </div>
-              <div className="w-[1120px] h-[599px] object-fit">
+              <div className="lg:w-[1120px] h-[599px] object-fit">
                 <img className="w-full  object-cover " src={aboutImg} alt="" />
               </div>
             </div>

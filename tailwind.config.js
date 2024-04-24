@@ -14,6 +14,10 @@ export default {
       colors: {
         "linear-green": "#36CBB9, #A7D545",
       },
+      fontFamily: {
+        Archivo: ["Archivo", "sans-serif"],
+        Inter: ["Inter", "sans-serif"],
+      },
     },
     plugins: [],
   },

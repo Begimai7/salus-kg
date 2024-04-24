@@ -26,13 +26,24 @@ const benefit_data = [
 ];
 
 export const Benefits = () => {
-  const [activeId, setActiveId] = useState(null);
-
+  const [activeId, setActiveId] = useState([]);
+  console.log(activeId, "nn");
   useEffect(() => {
     AOS.init({});
     AOS.refresh();
   }, [activeId]);
 
+  const openBenefitsText = (id) => {
+    setActiveId((prevIds) => {
+      const index = prevIds.indexOf(id);
+
+      if (index !== -1) {
+        return prevIds.filter((prevId) => prevId !== id);
+      } else {
+        return [...prevIds, id];
+      }
+    });
+  };
   return (
     <div>
       <h2 className="font-bold md:text-[48px] text-[24px] uppercase text-[#45651C]">
@@ -49,17 +60,21 @@ export const Benefits = () => {
           {benefit_data.map((el) => (
             <li
               key={el.id}
-              className={`flex items-center ml-0 md:gap-5 gap-1 hover:text-[#45651C] ${
-                activeId === el.id
-                  ? "text-[#45651C] transition-opacity duration-500 ease-in-out"
+              className={`flex ${
+                activeId.includes(el.id) ? "items-start" : "items-center"
+              } ml-0 md:gap-5 gap-1 hover:text-[#45651C] ${
+                activeId.includes(el.id)
+                  ? "text-[#45651C] transition-opacity duration-600 ease-in-out"
                   : "text-[#BBDA81]"
               } transition-colors  duration-500 ease-in-out`}
-              onClick={() => setActiveId(activeId === el.id ? null : el.id)}
+              onClick={() => openBenefitsText(el.id)}
             >
               <span
                 className={` ${
-                  activeId === el.id ? "text-[#45651C] " : "text-[#DFDFDF]"
-                } text-3xl transition-colors  duration-500 ease-in-out`}
+                  activeId.includes(el.id)
+                    ? "text-[#45651C] "
+                    : "text-[#DFDFDF]"
+                } text-3xl lg:pt-3 transition-colors  duration-500 ease-in-out`}
               >
                 <GoDotFill />
               </span>
@@ -68,15 +83,15 @@ export const Benefits = () => {
                   data-aos="fade-down"
                   data-aos-easing="linear"
                   data-aos-duration="1500"
-                  className="lg:text-[36px] sm:text-[24px] text-[18px] font-semibold "
+                  className="lg:text-[36px] sm:text-[24px] text-[18px] font-semibold m-0 p-0"
                 >
                   {el.title}
                 </p>
                 <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  className={`text-[#545454] text-[16px] font-normal w-[70%] transition-opacity duration-500 ease-in-out  ${
-                    activeId === el.id
+                  className={`text-[#545454] text-[16px]  m-0 p-0 font-normal w-[70%] transition-opacity duration-500 ease-in-out  ${
+                    activeId.includes(el.id)
                       ? "block opacity-100"
                       : "hidden opacity-0"
                   }`}

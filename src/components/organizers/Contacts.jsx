@@ -43,9 +43,9 @@ export const Contacts = () => {
         Контакты
       </h2>
       <hr className="bg-[#45651C] h-[2px] font-bold" />
-      <div className="flex md:flex-row flex-col md: gap-6 justify-between items-center mt-7">
-        <div className="flex flex-col items-start gap-7">
-          <ul className="flex flex-col gap-3">
+      <div className="flex md:flex-row flex-col md: gap-6 justify-between items-start mt-7">
+        <div className="flex flex-col items-start gap-3">
+          <ul className="flex flex-col gap-3 p-0">
             <li className="flex justify-center gap-2">
               <img src={phone} alt="" />{" "}
               <span className="text-[#337FFF]">(+996) 000 00 00 00</span>
@@ -55,23 +55,22 @@ export const Contacts = () => {
               <span className="text-[#337FFF]">(+996) 000 00 00 00</span>
             </li>
           </ul>
-          <ul className="flex gap-6">
+          <ul className="flex gap-6 p-0">
             {social_icons.map((el) => (
               <li key={el.id}>
                 <img src={el.icon} alt="" />
               </li>
             ))}
           </ul>
-          <div className="flex flex-col gap-3">
-            <h6 className="font-semibold text-[22px] text-[#45651C]">
+          <div className="flex flex-col gap-2">
+            <h6 className="font-semibold text-[22px] text-[#45651C] ">
               График работы
             </h6>
-            <p className="text-[18px]">
-              {" "}
+
+            <p className="text-[18px]  m-0">
               <span className="font-bold">Пн-Пт: </span> 09:00-19:30
             </p>
             <p className="text-[18px]">
-              {" "}
               <span className="font-bold">Сб-Вс: </span> Выходной
             </p>
           </div>
