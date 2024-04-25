@@ -7,10 +7,17 @@ import burger from "../../../public/assets/icons/mobile/open-burger.svg";
 import closeBurger from "../../../public/assets/icons/mobile/burger.svg";
 import phone from "../../../public/assets/icons/organizers/phone.svg";
 import { Languages } from "../UI/Languages";
+import Select from "../UI/Select";
+import { Application } from "../organizers/Application";
 
 export const Nav = () => {
   const [openMenuBurger, setOpenMenuBurger] = useState(false);
   const [openLanguages, setOpenLanguages] = useState(false);
+  const [openContactModal, setOpenContactModal] = useState(false);
+
+  const openContactModalHandler = () => {
+    setOpenContactModal(!openContactModal);
+  };
 
   const openMenuBurgerHandler = () => {
     setOpenMenuBurger(!openMenuBurger);
@@ -24,10 +31,28 @@ export const Nav = () => {
   };
 
   return (
-    <div className="w-full bg-[##DBEEDE]">
+    <div className="w-full bg-[##DBEEDE] relative">
+      {openContactModal && (
+        <div
+          className="fixed inset-0 z-40 bg-black opacity-10"
+          onClick={openContactModalHandler}
+        ></div>
+      )}
+
+      {openContactModal && (
+        <div className={`fixed top-[100px] left-36 w-[80%] h-[60%] z-50`}>
+          {" "}
+          <Application closeModal={openContactModalHandler} />{" "}
+        </div>
+      )}
+
       <Container>
         <nav>
-          <div className="fixed  flex flex-col z-50 lg:w-[1280px] sm:w-[640px] md:w-[768px] s: full ">
+          <div
+            className={`fixed  flex flex-col ${
+              openContactModal ? "z-0" : "z-50"
+            } lg:w-[1280px] sm:w-[640px] md:w-[768px] s: full `}
+          >
             <div className=" lg:flex hidden gap-3 justify-end pr-[82px] bg-black w-full   text-white  backdrop-blur-lg fixed top-0 left-0 py-[12px]">
               <div className="flex justify-center gap-2">
                 <img src={phone} alt="" />{" "}
@@ -59,18 +84,21 @@ export const Nav = () => {
                     ))}
                   </ul>
                   <div>
-                    <div
-                      className="lg:flex"
-                      onMouseMove={openLanguageSelectHandler}
-                    >
-                      РУ <img src={closeArrow} alt="" />
-                    </div>
-                    {openLanguages && (
-                      <Languages onClickHandler={selectLanguageSelectHandler} />
-                    )}
+                    <Select onClickHandler={selectLanguageSelectHandler} />
                   </div>
                   <div className="lg:flex ml-3">
-                    <Button padding="64px">Связаться</Button>
+                    <Button
+                      // style={{
+                      //   backColor: "#DDE1E6",
+                      //   opacity: "0.85",
+                      //   backdropFilter: "blur(10px)",
+                      // }}
+                      onClick={openContactModalHandler}
+                      padding="64px"
+                      backColor={`linear-gradient(#36CBB9, #A7D545)`}
+                    >
+                      Связаться
+                    </Button>
                   </div>
                 </div>
               </div>

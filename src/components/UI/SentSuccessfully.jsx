@@ -9,7 +9,7 @@ export const SentSuccessfully = ({ closeModal }) => {
         <img
           src={cancel}
           alt="Cancel"
-          className="absolute top-4 right-4 cursor-pointer"
+          className=" top-4 right-4 cursor-pointer"
           onClick={closeModal}
         />
 

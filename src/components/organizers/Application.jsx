@@ -4,7 +4,7 @@ import { Button } from "../UI/Button";
 import { useState } from "react";
 import { SentSuccessfully } from "../UI/SentSuccessfully";
 
-export const Application = ({ connection }) => {
+export const Application = ({ connection, closeModal }) => {
   const [sentSuccessfully, setSentSuccessfully] = useState(false);
 
   const sentSuccessfullyHandler = () => {
@@ -16,20 +16,28 @@ export const Application = ({ connection }) => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative z-10">
         {sentSuccessfully && <SentSuccessfully closeModal={closeHandler} />}
       </div>
       <div>
-        <h2 className="font-bold md:text-[48px] text-[24px] uppercase text-[#45651C]">
-          Заявка
-        </h2>
-        <hr className="bg-[#45651C] h-[2px] font-bold" />
+        {connection && (
+          <div>
+            <h2 className="font-bold md:text-[48px] text-[24px] uppercase text-[#45651C]">
+              Заявка
+            </h2>
+            <hr className="bg-[#45651C] h-[2px] font-bold" />
+          </div>
+        )}
         <div
           className="w-full  bg-cover bg-center mt-7 rounded-[30px]"
           style={{ backgroundImage: `url(${applicationBg}) ` }}
         >
           <div className="flex lg:flex-row flex-col justify-between lg:items-end items-center gap-5 sm:p-14 p-7">
-            <div className="flex flex-col lg:items-start items-center gap-4 lg:w-1/2 w-full">
+            <div
+              className={`flex flex-col lg:items-start items-center gap-4 lg:w-1/2 w-full md:h-[500px] ${
+                connection ? "" : "fixed"
+              }${connection ? "" : "z-50"}} ${connection ? "" : "inset-0"}`}
+            >
               <h6 className="font-semibold sm:text-4xl text-[20px] text-white sm: mb-4">
                 Для получения консультации оставьте заявку, и мы свяжемся с
                 вами.
@@ -64,7 +72,8 @@ export const Application = ({ connection }) => {
                 </Button>
               </div>
             </div>
-            {connection && (
+
+            {connection ? (
               <div className="p-7 bg-white bg-opacity-50 backdrop-blur-md rounded-3xl text-start lg:w-1/2 sm:w-2/3 w-full">
                 <div className="flex flex-col gap-4">
                   <h6 className="text-[#45651C] sm:text-24 text-18 font-semibold">
@@ -79,6 +88,13 @@ export const Application = ({ connection }) => {
                     <span>(+996) 000 00 00 00</span>
                   </div>
                 </div>
+              </div>
+            ) : (
+              <div className="fixed inset-0 z-[-1]">
+                <div
+                  className="absolute inset-0    bg-opacity-60 backdrop-filter bg-[#000] backdrop-blur-sm"
+                  onClick={closeModal}
+                ></div>
               </div>
             )}
           </div>

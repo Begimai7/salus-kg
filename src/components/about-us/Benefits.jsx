@@ -27,7 +27,6 @@ const benefit_data = [
 
 export const Benefits = () => {
   const [activeId, setActiveId] = useState([]);
-  console.log(activeId, "nn");
   useEffect(() => {
     AOS.init({});
     AOS.refresh();
@@ -80,7 +79,7 @@ export const Benefits = () => {
               </span>
               <div>
                 <p
-                  data-aos="fade-down"
+                  data-aos={activeId.includes(el.id) ? "fade-up" : "fade-down"}
                   data-aos-easing="linear"
                   data-aos-duration="1500"
                   className="lg:text-[36px] sm:text-[24px] text-[18px] font-semibold m-0 p-0"
@@ -88,8 +87,10 @@ export const Benefits = () => {
                   {el.title}
                 </p>
                 <p
-                  data-aos="fade-up"
+                  data-aos={activeId.includes(el.id) ? "fade-up" : "fade-down"}
                   data-aos-duration="1000"
+                  data-aos-anchor={`.anchor-${el.id}`}
+                  data-aos-anchor-placement="top-bottom"
                   className={`text-[#545454] text-[16px]  m-0 p-0 font-normal w-[70%] transition-opacity duration-500 ease-in-out  ${
                     activeId.includes(el.id)
                       ? "block opacity-100"

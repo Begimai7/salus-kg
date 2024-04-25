@@ -239,48 +239,35 @@ export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
   };
 
   return (
-    <div className="md:w-[90%] w-[100%] m-[auto]">
+    <div className="md:w-[90%] w-[100%] m-[auto] relative p-0 my-0">
       <Slider
         {...settings}
         afterChange={(currentSlide) => setSelectedOrganizerId(currentSlide + 1)}
       >
         {currentOrganizer && (
           <div key={currentOrganizer.id}>
-            <div key={currentOrganizer.id}>
-              <div className="flex lg:flex-row flex-col lg:items-center items-center gap-5 sm:w-full md:w-full">
-                <img
-                  src={currentOrganizer.image}
-                  alt=""
-                  className="rounded-2xl w-[600px] md:w-auto"
-                />
-                <div
-                  key={currentOrganizer.id}
-                  className="flex flex-col md:w-auto"
-                  style={{
-                    alignItems: "flex-start",
-                    marginLeft: "20px",
-                  }}
-                >
-                  <img src={currentOrganizer.hover_logo} alt="" />
-                  <h6 className="font-bold text-[42px] pt-5 pb-3">
-                    {currentOrganizer.title}
-                  </h6>
-                  <p>{currentOrganizer.description}</p>
-                  <div className="pt-9">
-                    <Button padding="60px">
-                      <img src={file} alt="" />
-                      Документация от застройщика
-                    </Button>
-                  </div>
-                </div>
+            <div className="flex lg:flex-row flex-col lg:items-center items-center gap-5 sm:w-full md:w-full">
+              <img
+                src={currentOrganizer.image}
+                alt=""
+                className="rounded-2xl w-[600px] md:w-auto"
+              />
+              <div
+                className="flex flex-col md:w-auto"
+                style={{ alignItems: "flex-start", marginLeft: "20px" }}
+              >
+                <img src={currentOrganizer.hover_logo} alt="" />
+                <h6 className="font-bold text-[42px] pt-5 pb-3">
+                  {currentOrganizer.title}
+                </h6>
+                <p>{currentOrganizer.description}</p>
               </div>
             </div>
           </div>
         )}
-
         {similarOrganizers.map((organizer) => (
           <div key={organizer.id}>
-            <div className="flex lg:flex-row flex-col lg:items-center items-center gap-5 sm:w-full md:w-full">
+            <div className="flex lg:flex-row flex-col lg:items-start items-center gap-5 sm:w-full md:w-full m-0 p-0">
               <img
                 src={organizer.image}
                 alt=""
@@ -288,27 +275,26 @@ export const OrganizersInfo = ({ currentSlide, setSelectedOrganizerId }) => {
               />
               <div
                 className="flex flex-col md:w-auto"
-                style={{
-                  alignItems: "flex-start",
-                  marginLeft: "20px",
-                }}
+                style={{ alignItems: "flex-start", marginLeft: "20px" }}
               >
                 <img src={organizer.logo} alt="" className="w-40" />
-                <h6 className="font-bold text-[42px] pt-5 pb-3">
+                <h6 className="font-bold text-[42px] pt-4 pb-3">
                   {organizer.title}
                 </h6>
                 <p>{organizer.description}</p>
-                <div className="pt-9">
-                  <Button padding="60px">
-                    <img src={file} alt="" />
-                    Документация от застройщика
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
         ))}
       </Slider>
+      <div className="absolute right-0 bottom-0 m-0 p-0 pb-7 mb-7">
+        <div className="mb-3">
+          <Button padding="60px">
+            <img src={file} alt="" />
+            Документация от застройщика
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
